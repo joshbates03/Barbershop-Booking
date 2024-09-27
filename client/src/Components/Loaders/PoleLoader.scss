@@ -1,0 +1,177 @@
+// Credit: https://codepen.io/bphillips201/pen/npMYNx
+
+$custom-backRed: #000000;
+$custom-solidRed: #ee1121;
+$custom-darkRed: #ffffff;
+$custom-brickRed: #EB755D;
+$custom-purple: #000000;
+$custom-borderPurple: rgb(41, 41, 41);
+$custom-white: #ffffff;
+$custom-lightGray: #DADCE2;
+$custom-gray: rgb(43, 255, 0);
+$custom-medGray: #5e5e5e;
+$custom-darkGray: #000000;
+$custom-poleBorder: 7px solid $custom-borderPurple;
+$custom-brick: 7px solid $custom-brickRed;
+
+* {
+  box-sizing: border-box;  
+}
+
+body {
+  background: $custom-backRed; 
+
+}
+
+.custom-container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.custom-pole {
+  height: 335px;
+  width: 130px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.custom-head {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 50%;
+  margin-left: -60px;
+  border: $custom-poleBorder;
+  border-radius: 50%;
+  background: $custom-lightGray;
+  overflow: hidden;
+  padding-top: 6px;
+  box-shadow: inset 0 -60px 0 -30px $custom-medGray;
+  
+  &:after {
+    content: "";
+    width: 70px;
+    height: 50px;
+    left: 50%;
+    top: 5px;
+    margin-left: -35px;
+    background: $custom-white;
+    border-radius: 50%;
+    position: absolute;
+  }
+}
+
+.custom-head-base {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  margin-left: -50px;
+  height: 16px;
+  border: $custom-poleBorder;
+  border-bottom: none;
+  width: 100px;
+  z-index: 2;
+  background: $custom-lightGray;
+  box-shadow: inset 0 -4px 0 0 $custom-medGray;
+}
+
+.custom-loader-head {
+  position: absolute;
+  height: 38px;
+  width: 100%;
+  border: $custom-poleBorder;
+  top: 106px;
+  z-index: 2;
+  background: $custom-medGray;
+  box-shadow: inset 0 6px 0 0 $custom-lightGray;
+}
+
+.custom-loader {
+  position: absolute;
+  height: 177px;
+  width: 102px;
+  top: 124px;
+  left: 50%;
+  margin-left: -51px;
+  border: $custom-poleBorder;
+  background: $custom-white;
+  z-index: 3;
+  overflow: hidden;
+  
+  &:after {
+    content: "";
+    width: 50%;
+    height: 177px;
+    background: $custom-darkGray;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.2;
+  }
+  
+  .custom-inset {
+    border-right: 6px solid $custom-white;
+    border-left: 6px solid $custom-white;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    animation: custom-spin 1s infinite linear;
+    
+    div {
+      transform: rotate(-40deg);
+    }
+  }
+  
+  .custom-red {
+    height: 28px;
+    width: 200%;
+    margin-bottom: 42px;
+    background: $custom-solidRed;
+    position: relative;
+    left: -50%;
+  }
+  
+  .custom-blue {
+    height: 28px;
+    width: 200%;
+    margin-bottom: 42px;
+    background: $custom-purple;
+    position: relative;
+    left: -50%;
+  }
+}
+
+.custom-loader-base {
+  position: absolute;
+  height: 38px;
+  width: 100%;
+  border: $custom-poleBorder;
+  bottom: 16px;
+  z-index: 2;
+  background: $custom-lightGray;
+  box-shadow: inset 0 -6px 0 0 $custom-medGray;
+}
+
+.custom-base {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+  height: 16px;
+  border: $custom-poleBorder;
+  border-top: none;
+  width: 100px;
+  z-index: 2;
+  background: $custom-lightGray;
+  box-shadow: inset 0 -4px 0 0 $custom-medGray;
+}
+
+@keyframes custom-spin {
+  from {
+    transform: translateY(0);
+  }
+  
+  to {
+    transform: translateY(-140px);  
+  }
+}
