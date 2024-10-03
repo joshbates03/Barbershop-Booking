@@ -82,7 +82,7 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <div className="absolute inset-x-0 top-0 h-0.5 bg-razoredgered shadow-lg" style={{ boxShadow: '0 0 20px rgba(220, 38, 38, 0.5)', opacity: 1 }}></div>
+        <div className="absolute inset-x-0 top-0 h-0.5 bg-dark-main shadow-lg" style={{ boxShadow: '0 0 20px rgba(220, 38, 38, 0.5)', opacity: 1 }}></div>
       </section>
 
       {/* Contact Information / Policies */}
@@ -94,11 +94,11 @@ const Homepage = () => {
             </div>
             <div className="mt-4 space-y-4">
               <div className="flex items-center md:justify-start justify-center space-x-2">
-                <HiPhone className='text-razoredgered text-3xl' />
+                <HiPhone className='text-dark-main text-3xl' />
                 <p className="text-gray-400">+44 B4RB3R S40P</p>
               </div>
               <div className="flex items-center space-x-2">
-                <IoIosPin className='text-razoredgered text-4xl' />
+                <IoIosPin className='text-dark-main text-4xl' />
                 <p className="text-gray-400">1802 Barber Lane, Clippersville, UK</p>
               </div>
             </div>
