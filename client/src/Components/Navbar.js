@@ -31,9 +31,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   const timeoutRef = useRef(null);
 
   useEffect(() => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   }, []);
 
   // SignalR websocket
@@ -92,10 +92,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   // Fetch notifications if the user is an admin
   const fetchNotifications = async () => {
     if (!isAdmin && !isBarber) return;
-  
+
     try {
       setLoadingNotifications(true);
-  
+
       const getNotiflications = await fetch(`${baseUrl}/api/userActivity/Notiflications`, {
         method: 'GET',
         credentials: 'include',
@@ -103,9 +103,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           'Content-Type': 'application/json',
         },
       });
-  
+
       const getNotiflicationsResponse = await getNotiflications.json();
-   
+
       if (getNotiflications.ok) {
         setNotifications(getNotiflicationsResponse.$values.reverse());
         setError('');
@@ -119,7 +119,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       setLoadingNotifications(false);
     }
   };
-  
+
   const menuNavigate = useCallback((url) => {
     setMenuOpen(false);
     navigate(url);
@@ -196,7 +196,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             <IoMdNotifications
               size={24}
               className="text-white cursor-pointer hover:scale-110 transition-transform duration-200"
-              onClick={toggleNotifications} 
+              onClick={toggleNotifications}
             />
           )}
 
@@ -243,7 +243,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       </div>
 
       {/* Notification sidebar */}
-      <div className={`fixed top-0 right-0 h-screen w-2/3 md:w-[400px] bg-primary-dark border-l-[10px] border-secondary-dark shadow-xl. text-white z-50 transition-transform duration-300 ${notificationsOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 right-0 h-[100dvh] w-2/3 md:w-[400px] bg-primary-dark border-l-[10px] border-secondary-dark shadow-xl. text-white z-50 transition-transform duration-300 ${notificationsOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="p-4 h-full flex flex-col">
           <HeadingText customText={'NOTIFLICATIONS'} textSize='md:text-2xl text-base' />
           <div className="mt-2 overflow-y-auto flex-grow  p-0.5">
@@ -292,7 +292,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
       {/* SM: links */}
       {menuOpen && (
-        <ul className="background-with-scissors-menu bg-black overflow-hidden z-30 absolute flex flex-col justify-center items-center top-0 left-0 w-full h-screen ">
+        <ul className="background-with-scissors-menu bg-black overflow-hidden z-30 fixed top-0 left-0 w-full h-[100dvh] flex flex-col justify-center items-center">
           {links.map((link, index) => (
             <React.Fragment key={link.id}>
               <li
@@ -301,12 +301,20 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               >
                 {link.link.toUpperCase()}
               </li>
-
-              {index !== links.length - 1 && ( <div style={{  background: 'linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%)' , height: '1px' }} className="w-1/4 mt-2"></div>)}
+              {index !== links.length - 1 && (
+                <div
+                  style={{
+                    background: 'linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%)',
+                    height: '1px'
+                  }}
+                  className="w-1/4 mt-2"
+                ></div>
+              )}
             </React.Fragment>
           ))}
         </ul>
       )}
+
 
       {showLogout && (
         <RemoveModal

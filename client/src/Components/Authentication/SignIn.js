@@ -71,7 +71,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-[80vh] p-4">
+    <div className="flex justify-center items-center min-h-[80dvh] p-4">
       <div className="max-w-sm w-full h-fit mx-auto p-6 rounded-2xl shadow-md bg-primary-dark text-white">
       <HeadingText customWidth='35%' customText='SIGN IN' textSize='text-2xl' />
         <form onSubmit={handleSignIn}>

@@ -288,7 +288,7 @@ const Gallery = () => {
 
   if (isLoading) {
     return (
-      <div className='min-h-[80vh] items-center justify-center flex' style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
+      <div className='min-h-[80dvh] items-center justify-center flex' style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
         <PoleLoader />
       </div>
     );
@@ -377,7 +377,7 @@ const Gallery = () => {
       )}
 
       {!fetchImageSuccess ? (
-        <div className='flex flex-col items-center justify-center mt-5 h-[60vh]'>
+        <div className='flex flex-col items-center justify-center mt-5 h-[60dvh]'>
           <HeadingTextAlt title={'SOMETHING WENT WRONG'} subtitle={'CLICK BELOW TO TRY AGAIN'}
             titleSize="md:text-2xl text-xl"
             subtitleSize="md:text-xl text-base" />
@@ -391,7 +391,7 @@ const Gallery = () => {
       ) : (
         <>
           {images.length === 0 ? (
-            <div className='flex items-center justify-center h-[80vh]'>
+            <div className='flex items-center justify-center h-[80dvh]'>
               <HeadingTextAlt title={'NO IMAGES HAVE BEEN UPLOADED'} subtitle={'CHECK BACK AGAIN LATER'}
                 titleSize="md:text-2xl text-lg"
                 subtitleSize="md:text-xl text-sm" />
@@ -445,7 +445,7 @@ const Gallery = () => {
       {selectedImageIndex !== null && (
         <div className="fixed inset-0 z-40 flex items-center justify-center p-4 bg-black bg-opacity-75" {...swipeHandlers}>
           <div className="fixed inset-0" onClick={handleCloseModal}></div>
-          <div className="relative w-full max-w-4xl max-h-[80vh] flex justify-center items-center rounded-lg overflow-hidden">
+          <div className="relative w-full max-w-4xl max-h-[80dvh] flex justify-center items-center rounded-lg overflow-hidden">
             <button
               className={`${getButtonStyle('standard', isTouchScreen)} absolute left-3 p-2 ${selectedImageIndex === 0 ? 'opacity-50 pointer-events-none' : ''} duration-300`}
               onClick={handlePreviousImage}
@@ -489,7 +489,7 @@ const Gallery = () => {
                 ref={imgRef}
                 src={preview}
                 alt="Upload"
-                style={{ maxHeight: '70vh' }}
+                style={{ maxHeight: '70dvh' }}
                 onLoad={onImageLoad}
               />
             </ReactCrop>

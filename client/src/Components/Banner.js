@@ -4,24 +4,24 @@ import { RxCross2 } from 'react-icons/rx';
 
 const Banner = () => {
     const [hidden, setHidden] = useState(false);
-    const [isClosing, setIsClosing] = useState(false); // Control height transition
+    const [isClosing, setIsClosing] = useState(false); 
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setIsClosing(true); // Start height transition
+            setIsClosing(true); 
             setTimeout(() => {
-                setHidden(true); // Actually hide after the height transition
-            }, 1000); // Set to 1 second, matching the transition duration
-        }, 10000); // 10,000 milliseconds = 10 seconds
+                setHidden(true); 
+            }, 1000); 
+        }, 10000); 
 
-        return () => clearTimeout(timer); // Cleanup the timeout if the component is unmounted
+        return () => clearTimeout(timer); 
     }, []);
 
     const handleClose = () => {
-        setIsClosing(true); // Start height transition when manually closing
+        setIsClosing(true); 
         setTimeout(() => {
             setHidden(true);
-        }, 1000); // Set to 1 second, matching the transition duration
+        }, 1000); 
     };
 
     return (
@@ -29,7 +29,7 @@ const Banner = () => {
             {hidden ? null : (
                 <div
                     className={`bg-dark-main p-2 text-center relative ease-in-out transition-all duration-1000 ${isClosing ? 'max-h-0' : 'max-h-screen'}`}
-                    style={{ overflow: 'hidden' }} // Ensures content is hidden as height decreases
+                    style={{ overflow: 'hidden' }} 
                 >
                     <button
                         className="absolute top-2 right-2 text-white hover:scale-105 duration-200"

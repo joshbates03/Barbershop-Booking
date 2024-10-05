@@ -25,7 +25,7 @@ function App() {
   const basename = process.env.NODE_ENV === 'production' ? '/barbershopbooking' : '/';
 
   return (
-    <div className="background-with-scissors min-h-screen w-full flex flex-col relative  z-0">
+    <div className="background-with-scissors min-h-[100dvh] w-full flex flex-col relative  z-0">
       <TouchScreenProvider>
       <Router basename={basename}>
           <AuthProvider>

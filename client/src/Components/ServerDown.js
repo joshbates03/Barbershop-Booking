@@ -20,7 +20,7 @@ const ServerDown = ({ retry, isTouchScreen, failureType }) => {
     };
     
     return (
-        <div className="flex  flex-col  justify-center items-center  min-h-[80vh] p-4 ">
+        <div className="flex  flex-col  justify-center items-center  min-h-[80dvh] p-4 ">
             <HeadingTextAlt
                 title={failureType === 'backend_error' ? 'SOMETHING WENT WRONG' : 'SERVER ERROR'}
                 subtitle={'CLICK BELOW TO TRY AGAIN'}

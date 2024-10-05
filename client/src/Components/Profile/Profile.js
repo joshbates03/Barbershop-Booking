@@ -49,13 +49,13 @@ const Profile = () => {
   return (
     <>
       {loadingAppointments || loadingProfile || loadingBarbers ? (
-        <div className='min-h-[80vh] items-center justify-center flex' style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
+        <div className='min-h-[80dvh] items-center justify-center flex' style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
           <PoleLoader />
         </div>
       ) : (
         <>
           {(profileFailType !== 'ok' && appointmentFailType !== "ok" && barberFailedType !== 'ok') ? (
-            <div className='w-full h-[calc(100vh-10rem)] items-center justify-center flex flex-col'>
+            <div className='w-full h-[calc(100dvh-10rem)] items-center justify-center flex flex-col'>
               <HeadingTextAlt
                 title={barberFailedType === 'backend_error' ? 'Something went wrong' : 'Server Error'}
                 subtitle={'CLICK BELOW TO TRY AGAIN'}

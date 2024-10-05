@@ -536,7 +536,7 @@ const Book = ({ adminModify = false, originalAppointment, toggleAdmin }) => {
   return (
     <div>
       {isLoading ?
-        (<div className={` ${adminModify ? '' : 'min-h-[80vh] '}items-center justify-center flex`} style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
+        (<div className={` ${adminModify ? '' : 'min-h-[80dvh] '}items-center justify-center flex`} style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
           <PoleLoader />
         </div>)
         :

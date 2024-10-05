@@ -525,8 +525,8 @@ const Schedules = ({ selectedBarber }) => {
 
   if (loading) {
     return (
-      <div className='h-[50vh] justify-center items-center flex'>
-        <div className=' min-h-[80vh] items-center justify-center flex' style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
+      <div className='h-[50dvh] justify-center items-center flex'>
+        <div className=' min-h-[80dvh] items-center justify-center flex' style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
           <PoleLoader />
         </div>
       </div>
@@ -734,17 +734,17 @@ const Schedules = ({ selectedBarber }) => {
               </div>
               <div className="mb-2">
                 <p className="block px-0.5 md:text-base text-sm duration-300">Start Date</p>
-                <input type="date" value={addStartDate} onChange={(e) => setAddStartDate(e.target.value)} className={`${getInputStyle()}`} />
+                <input type="date" value={addStartDate} onChange={(e) => setAddStartDate(e.target.value)} className={`${getInputStyle()} w-full`} />
               </div>
               <div className="mb-2">
                 <p className="block px-0.5 md:text-base text-sm duration-300">End Date</p>
-                <input type="date" value={addEndDate} onChange={(e) => setAddEndDate(e.target.value)} className={`${getInputStyle()}`} />
+                <input type="date" value={addEndDate} onChange={(e) => setAddEndDate(e.target.value)} className={`${getInputStyle()} w-full`} />
               </div>
               <div className="mb-2">
                 <p className=" block px-0.5 md:text-base text-sm duration-300">
                   Time Slots
                 </p>
-                <input type="text" value={addTimes} onChange={(e) => setAddTimes(e.target.value)} className={`${getInputStyle()}`} placeholder="09:00, 09:30, ..." />
+                <input type="text" value={addTimes} onChange={(e) => setAddTimes(e.target.value)} className={`${getInputStyle()} w-full`} placeholder="09:00, 09:30, ..." />
               </div>
               <hr className="my-3" />
               <div className="mb-2">
@@ -756,7 +756,7 @@ const Schedules = ({ selectedBarber }) => {
                       type="time"
                       value={startTime}
                       onChange={(e) => setStartTime(e.target.value)}
-                      className={`${getInputStyle()}`}
+                      className={`${getInputStyle()} w-full`}
                     />
                   </div>
                   <div className="flex-1 mb-2 md:mb-0">
@@ -765,7 +765,7 @@ const Schedules = ({ selectedBarber }) => {
                       type="time"
                       value={endTime}
                       onChange={(e) => setEndTime(e.target.value)}
-                      className={`${getInputStyle()}`}
+                      className={`${getInputStyle()} w-full`}
                     />
                   </div>
                   <div className="flex-1">
@@ -819,11 +819,11 @@ const Schedules = ({ selectedBarber }) => {
               <HeadingText customText={'ADD SPECIAL SCHEDULE'} customWidth={'80%'} textSize='text-2xl' />
               <div className="mb-2">
                 <p className="block px-0.5 md:text-base text-sm duration-300">Start Date</p>
-                <input type="date" value={addStartDate} onChange={(e) => setAddStartDate(e.target.value)} className={`${getInputStyle()}`} />
+                <input type="date" value={addStartDate} onChange={(e) => setAddStartDate(e.target.value)} className={`${getInputStyle()} w-full`} />
               </div>
               <div className="mb-2">
                 <p className="block px-0.5 md:text-base text-sm duration-300">End Date</p>
-                <input type="date" value={addEndDate} onChange={(e) => setAddEndDate(e.target.value)} className={`${getInputStyle()}`} />
+                <input type="date" value={addEndDate} onChange={(e) => setAddEndDate(e.target.value)} className={`${getInputStyle()} w-full`} />
               </div>
               <div className="mb-2 flex flex-row items-center">
                 <p className="block px-0.5 md:text-base text-sm duration-300">Is Holiday</p>
@@ -854,7 +854,7 @@ const Schedules = ({ selectedBarber }) => {
                       type="time"
                       value={startTime}
                       onChange={(e) => setStartTime(e.target.value)}
-                      className={`${getInputStyle()}`}
+                      className={`${getInputStyle()} w-full`}
                       disabled={isHoliday}
                     />
                   </div>
@@ -864,7 +864,7 @@ const Schedules = ({ selectedBarber }) => {
                       type="time"
                       value={endTime}
                       onChange={(e) => setEndTime(e.target.value)}
-                      className={`${getInputStyle()}`}
+                      className={`${getInputStyle()} w-full`}
                       disabled={isHoliday}
                     />
                   </div>

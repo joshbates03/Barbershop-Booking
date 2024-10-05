@@ -43,7 +43,7 @@ const AdminHub = () => {
 
   if (loadingBarbers) {
     return (
-      <div className={`min-h-[80vh] items-center justify-center flex`} style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
+      <div className={`min-h-[80dvh] items-center justify-center flex`} style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
         <PoleLoader />
       </div>
     );
@@ -70,7 +70,7 @@ const AdminHub = () => {
         {isBarber && (
           <>
             {selectedBarber === null ? (
-              <div className='w-full h-[calc(100vh-10rem)] flex flex-col items-center justify-center'>
+              <div className='w-full h-[calc(100dvh-10rem)] flex flex-col items-center justify-center'>
                 <HeadingTextAlt
                   title={barberFailedType === 'backend_error' ? 'Something went wrong' : 'Server Error'}
                   subtitle='CLICK BELOW TO TRY AGAIN'

@@ -61,7 +61,7 @@ const VerifyEmail = () => {
   }, [location.search, verifyEmail]);
 
   return (
-    <div className='min-h-[80vh] flex flex-col items-center justify-center'>
+    <div className='min-h-[80dvh] flex flex-col items-center justify-center'>
       {verifying ? (
         <HeadingTextAlt title={'Verifying'} subtitle={'Please wait'} titleSize='md:text-2xl text-xl' subtitleSize='text-lg md:text-xl' />
       ) : (

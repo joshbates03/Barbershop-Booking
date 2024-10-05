@@ -572,8 +572,8 @@ const Appointments = ({ selectedBarber }) => {
 
   if (loading) {
     return (
-      <div className='h-[50vh] justify-center items-center flex'>
-        <div className=' min-h-[80vh] items-center justify-center flex' style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
+      <div className='h-[50dvh] justify-center items-center flex'>
+        <div className=' min-h-[80dvh] items-center justify-center flex' style={{ transform: 'scale(0.65)', transformOrigin: 'center' }}>
           <PoleLoader />
         </div>
       </div>
